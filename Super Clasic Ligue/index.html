@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tateti</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="Logoo.jpeg">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="River.png" alt="River Logo" class="team-logo" id="riverLogo">
+      <h1>Super Clasic Ligue</h1>
+      <img src="boca.png" alt="Boca Logo" class="team-logo" id="bocaLogo">
+    </div>
+  </nav>
+  <div class="container">
+    <div class="player-names">
+      <input type="text" id="playerXName" placeholder="Nombre de River" />
+      <input type="text" id="playerOName" placeholder="Nombre de Boca" />
+      <button id="startButton">Comenzar Juego</button>
+    </div>
+    <div class="game-container" id="gameContainer">
+      <div class="board" id="board"></div>
+      <div class="game-info" id="gameInfo">
+        <p id="winnerMessage"></p>
+        <p id="winningPlayer"></p>
+        <div id="moveCounter">Movimientos: 0</div>
+        <div class="buttons">
+          <button id="undoButton" onclick="undoMove()" disabled>Deshacer Movimiento</button>
+          <button id="restartButton" onclick="restartGame()">Reiniciar Juego</button>
+        </div>
+      </div>
+      <div class="gray-rectangle" id="grayRectangle"></div>
+      <div id="currentPlayer"></div> 
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
